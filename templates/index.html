@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ข้อความจากผู้ใช้ LINE</title>
+</head>
+<body>
+  <h2>ข้อความล่าสุด</h2>
+  <table border="1" cellpadding="5">
+    <tr><th>User ID</th><th>Message</th><th>Timestamp</th></tr>
+    {% for u, m, t in messages %}
+    <tr><td>{{ u }}</td><td>{{ m }}</td><td>{{ t }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
